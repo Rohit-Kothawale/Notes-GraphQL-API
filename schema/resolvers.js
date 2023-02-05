@@ -13,6 +13,10 @@ const resolvers = {
         }
     },
 
+    Notes: {
+        elements: (parent) => parent
+    },
+
     Mutation: {
         // Resolve mutation to create new Note and save in Database
         createNote: async (parent, args, context, info) => {
