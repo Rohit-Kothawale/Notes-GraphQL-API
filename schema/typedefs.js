@@ -8,9 +8,13 @@ const typeDefs = gql`
         note: String
     }
 
+    type Notes {
+        elements: [Note]
+    }
+
     type Query {
         # Read all notes from Database        
-        getAllNotes: [Note]
+        getAllNotes: Notes
 
         # Create new note
         getNote(id: ID): Note
